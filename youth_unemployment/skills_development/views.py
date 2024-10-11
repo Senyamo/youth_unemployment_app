@@ -154,3 +154,6 @@ def edit_profile(request):
 # Dashboard view
 def dashboard(request):
     return render(request, 'skills_development/dashboard.html')
+
+def home(request):
+    return render(request, 'home.html')

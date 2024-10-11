@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('skills_development.urls')),  # Include app URLs
     path('login/', auth_views.LoginView.as_view(template_name='skills_development/login.html'), name='login'),  # Login route
+    path('', views.home, name='home'),
 ]
