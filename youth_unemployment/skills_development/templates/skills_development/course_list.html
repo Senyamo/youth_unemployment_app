@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Courses</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Course</button>
+    </form>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course.title }} - {{ course.description }} ({{ course.duration }} hours)</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'skill_list' %}">Back to Skills</a>
+    <a href="{% url 'assessment_list' %}">Go to Assessments</a>
+</body>
+</html>

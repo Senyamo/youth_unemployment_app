@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Add your custom CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'job_list' %}">Jobs</a></li>
+                    <li><a href="{% url 'skill_list' %}">Skills</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Available Jobs</h1>
+
+        <h2>Local Jobs</h2>
+        <ul>
+            {% for job in local_jobs %}
+                <li>
+                    <h3>{{ job.title }}</h3>
+                    <p><strong>Company:</strong> {{ job.company }}</p>
+                    <p><strong>Location:</strong> {{ job.location }}</p>
+                    <p><strong>Description:</strong> {{ job.description }}</p>
+                </li>
+            {% empty %}
+                <li>No local jobs are available at the moment.</li>
+            {% endfor %}
+        </ul>
+
+        <h2>External Jobs</h2>
+        <ul>
+            {% for job in external_jobs %}
+                <li>
+                    <h3>{{ job.title }}</h3>
+                    <p><strong>Company:</strong> {{ job.company }}</p>
+                    <p><strong>Location:</strong> {{ job.location }}</p>
+                    <p><strong>Description:</strong> {{ job.description }}</p>
+                </li>
+            {% empty %}
+                <li>No external jobs are available at the moment.</li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

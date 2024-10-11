@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessments</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Assessments</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Assessment</button>
+    </form>
+    <ul>
+        {% for assessment in assessments %}
+            <li>{{ assessment.title }} - {{ assessment.description }} (Skill: {{ assessment.skill.name }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'skill_list' %}">Back to Skills</a>
+    <a href="{% url 'course_list' %}">Go to Courses</a>
+</body>
+</html>

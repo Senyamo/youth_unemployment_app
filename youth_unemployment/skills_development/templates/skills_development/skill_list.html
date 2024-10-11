@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills Development Programs</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Skills Development Programs</h1>
+
+    <h2>Add a New Skill</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- This will render the form fields -->
+        <button type="submit">Add Skill</button>
+    </form>
+
+    <h2>Existing Skills</h2>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill.name }} - {{ skill.description }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Search Skills</h2>
+    <form method="GET" action="{% url 'skill_list' %}">
+        <input type="text" name="q" placeholder="Search skills...">
+        <button type="submit">Search</button>
+    </form>
+
+</body>
+</html>
+
+
+
+

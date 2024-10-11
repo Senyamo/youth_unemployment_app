@@ -1,0 +1,195 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif; /* Font style */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    background-color: #f0f8ff; /* Light background color for contrast */
+    color: #333; /* Default text color for readability */
+}
+
+/* Header styles */
+header {
+    background-color: #4a9fd1; /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 1.5em; /* Padding for header */
+    text-align: center; /* Center header text */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* No padding */
+    display: flex; /* Flexbox for navigation */
+    justify-content: center; /* Center navigation items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Spacing between items */
+}
+
+nav ul li a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Transition effect for links */
+    font-weight: bold; /* Bold link text */
+}
+
+nav ul li a:hover {
+    color: #eaeaea; /* Link color on hover */
+}
+
+/* Main content styles */
+main {
+    padding: 30px; /* Increased padding for better spacing */
+    max-width: 900px; /* Max width for better readability */
+    margin: 30px auto; /* Center main content with margin */
+    background-color: #fff; /* Main content background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Headings styles */
+h1 {
+    text-align: center; /* Center main heading */
+    margin-bottom: 20px; /* Margin below heading */
+    color: #333; /* Heading color */
+}
+
+h2 {
+    color: #4a9fd1; /* Section headings color */
+    margin-top: 20px; /* Margin above section headings */
+    border-bottom: 2px solid #007bff; /* Underline for section headings */
+    padding-bottom: 5px; /* Padding below section headings */
+}
+
+/* Job listing styles */
+.job-listing {
+    background: #f9f9f9; /* Job listing background */
+    border: 1px solid #ddd; /* Border for job listing */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing below job listing */
+    padding: 15px; /* Padding inside job listing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.job-listing h3 {
+    margin-top: 0; /* No margin above job title */
+}
+
+/* Apply button styles */
+.apply-button {
+    display: inline-block; /* Block display for button */
+    padding: 10px 15px; /* Padding inside button */
+    background-color: #28a745; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for button color */
+}
+
+.apply-button:hover {
+    background-color: #218838; /* Darker color on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center; /* Center footer text */
+    padding: 20px; /* Padding for footer */
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    position: relative; /* Positioning */
+    bottom: 0; /* Align footer to bottom */
+    width: 100%; /* Full width footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        align-items: center; /* Center align items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Margin around stacked items */
+    }
+
+    main {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Smaller font size for headings on small screens */
+    }
+}
+
+/* Styles for Login and Register Pages */
+
+/* General form styles */
+.form-container {
+    display: flex; /* Flexbox for form */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    padding: 20px; /* Padding around the form */
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+    width: 100%; /* Full width for form elements */
+}
+
+.form-group label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+    color: #4a9fd1; /* Color for labels */
+}
+
+.form-group input {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ddd; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size for input */
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px; /* Padding inside button */
+    background-color: #4a9fd1; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for button color */
+    width: 100%; /* Full width button */
+    font-size: 1em; /* Font size for button */
+}
+
+.btn:hover {
+    background-color: #3a8cba; /* Darker color on hover */
+}
+
+/* Error message styles */
+.error-message {
+    color: red; /* Red color for error messages */
+    margin-top: 15px; /* Margin above error message */
+    text-align: center; /* Center align error message */
+}
+
+/* Header styles for login and register */
+header {
+    padding: 1.5em; /* Padding for header */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .btn {
+        font-size: 0.9em; /* Smaller font size for buttons on small screens */
+    }
+}
